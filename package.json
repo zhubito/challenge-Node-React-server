@@ -4,7 +4,9 @@
   "description": "cliente para CRUD en node y react",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "jest --verbose --silent tests/posts.test.js",
+    "test:watch": "npm run test -- --watch"
   },
   "keywords": [
     "nodejs",
@@ -22,5 +24,12 @@
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.9.0"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
